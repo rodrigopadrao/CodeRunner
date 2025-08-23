@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Conheça a CodeRunner: tecnologia e paixão por corrida. Explore nosso catálogo de tênis de alto desempenho.">
+    <meta name="author" content="Rodrigo Padrão">
+    <title>CodeRunner — Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="container">
+        <div class="branding">
+            <h1>Code<span>Runner</span></h1>
+            <p class="tagline">
+            <h2>Cadastro</h2>
+            </p>
+            <p class="actions">
+                <a class="btn btn-primary" href="index.html">Página Inicial</a>
+                <a class="btn btn-outline" href="#contato">Fale conosco</a>
+            </p>
+        </div>
+
+        <nav class="wrapper" aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html" target="_blank">Início</a></li>
+                <li><a href="catalogo.html" target="_blank">Catálogo</a></li>
+                <li><a href="precos.html" target="_blank">Tabela de preços</a></li>
+                <li><a href="cadastro.html" aria-current="page" target="_blank">Cadastro</a></li>
+                <li><a href="corridas.html" target="_blank">Corridas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal">
+
+        <section aria-labelledby="destaque">
+            <h2 id="destaque" class="visually-hidden"></h2>
+            <a href="cadastro.html" target="_blank">
+                <img src="img/cadastro.png" width="250" height="100" loading="lazy"
+                    alt="Cadastre-se para promoções — clique para ver.">
+            </a>
+            <h2>Cadastre-se para receber nossas promoções e novidades!</h2>
+            <form class="formulario">
+                <label for="inputNome">Nome</label>
+                <input id="inputNome" type="text" placeholder="Seu nome aqui..." required /><br />
+                <label for="inputIdade">Idade</label>
+                <input id="inputIdade" type="number" placeholder="000" max="120" /><br />
+                <label for="inputGenero">Gênero</label>
+                <label for="generoM">Masculino</label>
+                <input type="radio" name="genero" id="generoM" value="masc">
+                <label for="generoF">Feminino</label>
+                <input type="radio" name="genero" id="generoF" value="fem"><br />
+                <label for="inputTel">Telefone</label>
+                <input id="inputTel" type="tel" placeholder="(00) 00000-0000" /><br />
+                <label for="inputEmail">E-mail</label>
+                <input id="inputEmail" type="email" placeholder="seu.email@provedor.com" /><br />
+                <label for="inputCpf">CPF</label>
+                <input type="text" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" /><br />
+                <label for="">Modelo</label>
+                <select name="Modelo" id="opcoes">
+                    <option disabled selected>selecione um modelo</option>
+                    <option value="1">Adidas Runfalcon 5</option>
+                    <option value="2">Olympikus Corre 4</option>
+                    <option value="3">Asics Gel Nimbus 27</option>
+                </select>
+                <br /> 
+                <label for="inputNumeracao">Numeração</label>
+                <input id="inputNumeracao" type="number" min="36" max="46" placeholder="Tam." /><br /><br />
+                <button>Enviar</button>
+                <button type="reset">Limpar</button>
+            </form>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" aria-labelledby="contato-heading" class="wrapper">
+            <h2 id="contato-heading">Fale conosco</h2>
+            <address>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram da CodeRunner (abre em nova aba)">
+                            <img src="img/Insta.png" width="22" height="22" alt="Ícone do Instagram" loading="lazy">
+                            <span>@coderunner</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:rodrigopadrao@gmail.com"
+                            aria-label="Enviar e-mail para rodrigopadrao@gmail.com">
+                            <img src="img/email.png" width="22" height="22" alt="Ícone de e-mail" loading="lazy">
+                            <span>coderunner@ficticio.com</span>
+                        </a>
+                    </li>
+                </ul>
+            </address>
+        </section>
+
+    </main>
+
+    <footer class="wrapper">
+        <p>
+            <small>
+                &copy; <time datetime="2025">2025</time> Rodrigo Padrão · Versão 1.0 · Esta página é parte de um
+                exercício do curso.
+            </small>
+        </p>
+    </footer>
+
+</body>
+
+</html>
