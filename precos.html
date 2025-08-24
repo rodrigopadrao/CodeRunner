@@ -3,22 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Conheça a CodeRunner: tecnologia e paixão por corrida. Explore nosso catálogo de tênis de alto desempenho.">
-    <meta name="author" content="Rodrigo Padrão">
+        content="Conheça a CodeRunner: tecnologia e paixão por corrida. Preço justo, qualidade garantida em cada passada!">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/coderunner_icon_32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/coderunner_icon_96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/coderunner_icon_180.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#0c2230">
+    <link rel="canonical" href="https://seudominio.com.br/precos.html">
     <title>CodeRunner — Preços</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="container">
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    <header class="container" role="banner">
         <div class="branding">
             <h1>Code<span>Runner</span></h1>
-            <p class="tagline">
-            <h2>Tabela de Preços</h2>
-            </p>
+            <p class="tagline">Código no pé, velocidade na mente.</p>
             <p class="actions">
                 <a class="btn btn-primary" href="index.html">Página Inicial</a>
                 <a class="btn btn-outline" href="#contato">Fale conosco</a>
@@ -27,11 +33,11 @@
 
         <nav class="wrapper" aria-label="Navegação principal">
             <ul>
-                <li><a href="index.html" target="_blank">Início</a></li>
-                <li><a href="catalogo.html" target="_blank">Catálogo</a></li>
-                <li><a href="precos.html" aria-current="page" target="_blank">Tabela de preços</a></li>
-                <li><a href="cadastro.html" target="_blank">Cadastro</a></li>
-                <li><a href="corridas.html" target="_blank">Corridas</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="precos.html" aria-current="page">Tabela de preços</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="corridas.html">Corridas</a></li>
             </ul>
         </nav>
     </header>
@@ -57,45 +63,43 @@
         <!-- Sobre nós -->
         <section aria-labelledby="nossos-precos" class="wrapper">
             <h2 id="nossos-precos">Preço justo, qualidade garantida em cada passada!</h2>
-            <table border="1">
 
+            <table class="table-card price-table">
+                <caption class="visually-hidden">Tabela de preços — CodeRunner</caption>
                 <thead>
                     <tr>
-                        <th>MARCA</th>
-                        <th>MODELO</th>
-                        <th>VALOR</th>
-                        <th>CLASSIFICAÇÃO</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Classificação</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <tr>
                         <td data-label="Marca">Adidas</td>
                         <td data-label="Modelo">Runfalcon 5</td>
                         <td data-label="Valor">R$ 279,99</td>
-                        <td data-label="Classificação">***</td>
+                        <td data-label="Classificação" class="rating rating-3"><span class="visually-hidden">3 de
+                                5</span></td>
                     </tr>
                     <tr>
                         <td data-label="Marca">Olympikus</td>
                         <td data-label="Modelo">Corre 4</td>
                         <td data-label="Valor">R$ 599,99</td>
-                        <td data-label="Classificação">****</td>
+                        <td data-label="Classificação" class="rating rating-4"><span class="visually-hidden">4 de
+                                5</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Marca">Asics</td>
+                        <td data-label="Marca">ASICS</td>
                         <td data-label="Modelo">Gel Nimbus 27</td>
                         <td data-label="Valor">R$ 1.079,99</td>
-                        <td data-label="Classificação">*****</td>
+                        <td data-label="Classificação" class="rating rating-5"><span class="visually-hidden">5 de
+                                5</span></td>
                     </tr>
                 </tbody>
             </table>
-            <br />
-            <p>
-                <strong>Invista no melhor para sua corrida!</strong>
-            </p>
         </section>
 
-        <!-- Contato -->
         <section id="contato" aria-labelledby="contato-heading" class="wrapper">
             <h2 id="contato-heading">Fale conosco</h2>
             <address>

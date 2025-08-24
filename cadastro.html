@@ -3,22 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Conheça a CodeRunner: tecnologia e paixão por corrida. Explore nosso catálogo de tênis de alto desempenho.">
-    <meta name="author" content="Rodrigo Padrão">
+        content="Conheça a CodeRunner: tecnologia e paixão por corrida. Cadastre-se na CodeRunner e receba ofertas, novidades e conteúdos de corrida.">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/coderunner_icon_32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/coderunner_icon_96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/coderunner_icon_180.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#0c2230">
+    <link rel="canonical" href="https://seudominio.com.br/cadastro.html">
     <title>CodeRunner — Cadastro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="container">
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    <header class="container" role="banner">
         <div class="branding">
             <h1>Code<span>Runner</span></h1>
-            <p class="tagline">
-            <h2>Cadastro</h2>
-            </p>
+            <p class="tagline">Código no pé, velocidade na mente.</p>
             <p class="actions">
                 <a class="btn btn-primary" href="index.html">Página Inicial</a>
                 <a class="btn btn-outline" href="#contato">Fale conosco</a>
@@ -27,77 +33,110 @@
 
         <nav class="wrapper" aria-label="Navegação principal">
             <ul>
-                <li><a href="index.html" target="_blank">Início</a></li>
-                <li><a href="catalogo.html" target="_blank">Catálogo</a></li>
-                <li><a href="precos.html" target="_blank">Tabela de preços</a></li>
-                <li><a href="cadastro.html" aria-current="page" target="_blank">Cadastro</a></li>
-                <li><a href="corridas.html" target="_blank">Corridas</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="precos.html">Tabela de preços</a></li>
+                <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+                <li><a href="corridas.html">Corridas</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="conteudo-principal">
+        <section aria-labelledby="cadastro-title" class="wrapper">
+            <h2 id="cadastro-title">Cadastre-se para receber nossas promoções e novidades!</h2>
 
-        <section aria-labelledby="destaque">
-            <h2 id="destaque" class="visually-hidden"></h2>
-            <a href="cadastro.html" target="_blank">
-                <img src="img/cadastro.png" width="250" height="100" loading="lazy"
-                    alt="Cadastre-se para promoções — clique para ver.">
-            </a>
-            <h2>Cadastre-se para receber nossas promoções e novidades!</h2>
-            <form class="formulario">
-                <label for="inputNome">Nome</label>
-                <input id="inputNome" type="text" placeholder="Seu nome aqui..." required /><br />
-                <label for="inputIdade">Idade</label>
-                <input id="inputIdade" type="number" placeholder="000" max="120" /><br />
-                <label for="inputGenero">Gênero</label>
-                <label for="generoM">Masculino</label>
-                <input type="radio" name="genero" id="generoM" value="masc">
-                <label for="generoF">Feminino</label>
-                <input type="radio" name="genero" id="generoF" value="fem"><br />
-                <label for="inputTel">Telefone</label>
-                <input id="inputTel" type="tel" placeholder="(00) 00000-0000" /><br />
-                <label for="inputEmail">E-mail</label>
-                <input id="inputEmail" type="email" placeholder="seu.email@provedor.com" /><br />
-                <label for="inputCpf">CPF</label>
-                <input type="text" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" /><br />
-                <label for="">Modelo</label>
-                <select name="Modelo" id="opcoes">
-                    <option disabled selected>selecione um modelo</option>
-                    <option value="1">Adidas Runfalcon 5</option>
-                    <option value="2">Olympikus Corre 4</option>
-                    <option value="3">Asics Gel Nimbus 27</option>
-                </select>
-                <br /> 
-                <label for="inputNumeracao">Numeração</label>
-                <input id="inputNumeracao" type="number" min="36" max="46" placeholder="Tam." /><br /><br />
-                <button>Enviar</button>
-                <button type="reset">Limpar</button>
+            <section aria-labelledby="destaque">
+                <h3 id="destaque" class="visually-hidden">Destaques</h3>
+                <a href="catalogo.html">
+                    <img src="img/cadastro.png" width="800" height="320" loading="lazy"
+                        alt="Banner cadastro CodeRunner">
+                </a>
+            </section>
+
+            <form class="formulario" action="#" method="post" novalidate>
+                <div class="field">
+                    <label for="inputNome">Nome</label>
+                    <input id="inputNome" name="nome" type="text" placeholder="Seu nome aqui..." autocomplete="name"
+                        required>
+                </div>
+
+                <div class="field">
+                    <label for="inputIdade">Idade</label>
+                    <input id="inputIdade" name="idade" type="number" inputmode="numeric" min="1" max="120"
+                        placeholder="18">
+                </div>
+
+                <fieldset class="field">
+                    <legend>Gênero</legend>
+                    <label><input type="radio" name="genero" value="masc"> Masculino</label>
+                    <label><input type="radio" name="genero" value="fem"> Feminino</label>
+                </fieldset>
+
+                <div class="field">
+                    <label for="inputTel">Telefone</label>
+                    <input id="inputTel" name="telefone" type="tel" placeholder="(00) 00000-0000" autocomplete="tel">
+                </div>
+
+                <div class="field">
+                    <label for="inputEmail">E-mail</label>
+                    <input id="inputEmail" name="email" type="email" placeholder="seu.email@provedor.com"
+                        autocomplete="email" required>
+                </div>
+
+                <div class="field">
+                    <label for="inputCpf">CPF</label>
+                    <input id="inputCpf" name="cpf" type="text" placeholder="000.000.000-00" inputmode="numeric"
+                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+                    <small class="muted">Formato: 000.000.000-00</small>
+                </div>
+
+                <div class="field">
+                    <label for="opcoes">Modelo</label>
+                    <select name="modelo" id="opcoes" required>
+                        <option disabled selected>Selecione um modelo</option>
+                        <option value="1">Adidas Runfalcon 5</option>
+                        <option value="2">Olympikus Corre 4</option>
+                        <option value="3">ASICS Gel Nimbus 27</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="inputNumeracao">Numeração</label>
+                    <input id="inputNumeracao" name="numero" type="number" inputmode="numeric" min="36" max="46"
+                        placeholder="Tam." required>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="reset" class="btn btn-outline">Limpar</button>
+                </div>
             </form>
         </section>
+    </main>
 
-        <!-- Contato -->
-        <section id="contato" aria-labelledby="contato-heading" class="wrapper">
-            <h2 id="contato-heading">Fale conosco</h2>
-            <address>
-                <ul class="social-links">
-                    <li>
-                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram da CodeRunner (abre em nova aba)">
-                            <img src="img/Insta.png" width="22" height="22" alt="Ícone do Instagram" loading="lazy">
-                            <span>@coderunner</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:rodrigopadrao@gmail.com"
-                            aria-label="Enviar e-mail para rodrigopadrao@gmail.com">
-                            <img src="img/email.png" width="22" height="22" alt="Ícone de e-mail" loading="lazy">
-                            <span>coderunner@ficticio.com</span>
-                        </a>
-                    </li>
-                </ul>
-            </address>
-        </section>
+
+    <!-- Contato -->
+    <section id="contato" aria-labelledby="contato-heading" class="wrapper">
+        <h2 id="contato-heading">Fale conosco</h2>
+        <address>
+            <ul class="social-links">
+                <li>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram da CodeRunner (abre em nova aba)">
+                        <img src="img/Insta.png" width="22" height="22" alt="Ícone do Instagram" loading="lazy">
+                        <span>@coderunner</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:rodrigopadrao@gmail.com" aria-label="Enviar e-mail para rodrigopadrao@gmail.com">
+                        <img src="img/email.png" width="22" height="22" alt="Ícone de e-mail" loading="lazy">
+                        <span>coderunner@ficticio.com</span>
+                    </a>
+                </li>
+            </ul>
+        </address>
+    </section>
 
     </main>
 
